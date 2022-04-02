@@ -1,0 +1,39 @@
+{
+  "displayName": "Homebridge ecobee3 lite Sensors",
+  "name": "homebridge-ecobee3-lite-sensors",
+  "version": "0.0.0",
+  "description": "Plugin to expose the builtin sensors of ecobee3 lite to HomeKit.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WLBQE/homebridge-ecobee3-lite-sensors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WLBQE/homebridge-ecobee3-lite-sensors/issues"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "homebridge": ">=1.3.5"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src/**.ts --max-warnings=0",
+    "watch": "npm run build && npm link && nodemon",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.12.0",
+    "homebridge": "^1.4.0",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
